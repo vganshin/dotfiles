@@ -370,7 +370,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   (setq-default git-magit-status-fullscreen t)
   (my-setup-indent 2)
-  (setq vc-follow-symlinks t)
+  (setq vc-follow-symlinks t) ;; See https://stackoverflow.com/questions/15390178/emacs-and-symbolic-links
   (setq magit-repository-directories
         '(("~/hs/" . 1) ("~/projects/" . 1)))
   )
