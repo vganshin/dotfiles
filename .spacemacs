@@ -72,6 +72,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     octave
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
@@ -107,10 +108,11 @@ values."
      better-defaults
      html
      (auto-completion :variables
-                      auto-completion-return-key-behavior 'complete
-                      auto-completion-tab-key-behavior 'cycle
+                      auto-completion-return-key-behavior nil
+                      auto-completion-tab-key-behavior 'complete
                       auto-completion-complete-with-key-sequence nil
                       auto-completion-enable-help-tooltip t
+                      ;; auto-completion-minimum-prefix-length 3
                       ))
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -390,7 +392,15 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  (define-key evil-normal-state-map (kbd "RET") 'my-do))
+  (evil-leader/set-key "/" 'spacemacs/helm-project-do-ag)
+  (define-key evil-normal-state-map (kbd "RET") 'my-do)
+  ;; (spacemacs/set-leader-keys "mep" 'cider-eval-print-last-sexp)
+  (spacemacs/set-leader-keys-for-major-mode 'clojure-mode "ep" 'cider-eval-print-last-sexp)
+  (spacemacs/set-leader-keys-for-major-mode 'lisp "em" 'cider-eval-print-last-sexp)
+  (setq helm-ag-base-command "rg --vimgrep --no-heading --smart-case")
+  )
+
+;; cider-eval-print-last-sexp
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
