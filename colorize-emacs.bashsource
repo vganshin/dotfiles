@@ -1,0 +1,18 @@
+# sourcing this file will define a bash functions that 
+# tries to run subsequent calls to emacs with 24 bit color.
+#
+# It sets TERM to xterm-24bit if we're running in iTerm2
+# and we've created a user-local terminfo record for xterm-24bit
+#
+# This will cause emacs to use 24 bit color only when it will work,
+# inside or outside of tmux
+#
+# details: https://gist.github.com/XVilka/8346728
+function emacs () {
+    if [ "$LC_TERMINAL" == "iTerm2" -a -f "$HOME/.terminfo/x/xterm-24bit" ]
+    then
+        TERM=xterm-24bit command emacs "$@"
+    else
+        command emacs "$@"
+    fi
+}
