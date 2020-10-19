@@ -408,6 +408,8 @@ you should place your code here."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(powerline org-plus-contrib parent-mode request highlight smartparens iedit anzu f dash s phpunit phpcbf php-extras php-auto-yasnippets drupal-mode php-mode flycheck-pos-tip flycheck tern git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter diff-hl markdown-mode skewer-mode simple-httpd json-snatcher json-reformat js2-mode dash-functional haml-mode web-completion-data pos-tip company inflections cider multiple-cursors paredit sesman queue parseedn clojure-mode parseclj a yasnippet anaconda-mode pythonic auto-complete magit-popup gitignore-mode magit git-commit with-editor transient define-word yapfify yaml-mode ws-butler winum which-key web-mode web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package unfill toc-org tide tagedit sql-indent spaceline smeargle slim-mode scss-mode sass-mode reveal-in-osx-finder restart-emacs rainbow-delimiters pyvenv pytest pyenv-mode py-isort pug-mode popwin pip-requirements persp-mode pcre2el pbcopy paradox osx-trash osx-dictionary orgit org-bullets open-junk-file nginx-mode neotree mwim move-text mmm-mode markdown-toc magit-gitflow magit-gh-pulls macrostep lorem-ipsum livid-mode live-py-mode linum-relative link-hint launchctl json-mode js2-refactor js-doc indent-guide hy-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-pydoc helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag google-translate golden-ratio go-guru go-eldoc github-search github-clone github-browse-file gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gist gh-md fuzzy flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu emmet-mode elisp-slime-nav dumb-jump diminish cython-mode csv-mode company-web company-statistics company-quickhelp company-go company-anaconda column-enforce-mode coffee-mode clojure-snippets clj-refactor clean-aindent-mode cider-eval-sexp-fu auto-yasnippet auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell))
  '(spacemacs-theme-custom-colors
    '((base . "#ffffff")
      (bg1 . "#282a36")
@@ -415,7 +417,7 @@ you should place your code here."
      (bg3 . "#282a36")
      (bg4 . "#282a36")
      (cblk-ln-bg . "#ffffff")
-     (comment  . "#6272a4")
+     (comment . "#6272a4")
      (comment-bg . "#282a36")
      (func . "#50fa7b")
      (head3-bg . "#ffffff")
@@ -424,11 +426,7 @@ you should place your code here."
      (meta . "#86dc2f")
      (str . "#f1fa8c")
      (type . "#8be9fd")
-     (var . "#7590db")))
-
- '(package-selected-packages
-   (quote
-    (phpunit phpcbf php-extras php-auto-yasnippets drupal-mode php-mode flycheck-pos-tip flycheck tern git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter diff-hl markdown-mode skewer-mode simple-httpd json-snatcher json-reformat js2-mode dash-functional haml-mode web-completion-data pos-tip company inflections cider multiple-cursors paredit sesman queue parseedn clojure-mode parseclj a yasnippet anaconda-mode pythonic auto-complete magit-popup gitignore-mode magit git-commit with-editor transient define-word yapfify yaml-mode ws-butler winum which-key web-mode web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package unfill toc-org tide tagedit sql-indent spaceline smeargle slim-mode scss-mode sass-mode reveal-in-osx-finder restart-emacs rainbow-delimiters pyvenv pytest pyenv-mode py-isort pug-mode popwin pip-requirements persp-mode pcre2el pbcopy paradox osx-trash osx-dictionary orgit org-bullets open-junk-file nginx-mode neotree mwim move-text mmm-mode markdown-toc magit-gitflow magit-gh-pulls macrostep lorem-ipsum livid-mode live-py-mode linum-relative link-hint launchctl json-mode js2-refactor js-doc indent-guide hy-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-pydoc helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag google-translate golden-ratio go-guru go-eldoc github-search github-clone github-browse-file gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gist gh-md fuzzy flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu emmet-mode elisp-slime-nav dumb-jump diminish cython-mode csv-mode company-web company-statistics company-quickhelp company-go company-anaconda column-enforce-mode coffee-mode clojure-snippets clj-refactor clean-aindent-mode cider-eval-sexp-fu auto-yasnippet auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell))))
+     (var . "#7590db"))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
