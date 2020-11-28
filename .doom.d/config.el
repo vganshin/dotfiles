@@ -27,7 +27,16 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one)
+(setq doom-font (font-spec :font "Monoki Nerd Font Mono" :size 15))
+(setq doom-theme 'doom-dracula)
+
+(setq evil-escape-key-sequence "fd")
+
+(use-package! paredit
+  :hook ((scheme-mode emacs-lisp-mode clojure-mode) . enable-paredit-mode))
+
+;; (map! :leader
+;;       :desc "Jump to char" "/ c" #'avy-goto-char)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -37,6 +46,15 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
 
+(after! cider
+  (setq cider-repl-pop-to-buffer-on-connect nil)
+  (set-popup-rule! "^\\*cider*" :size 0.45 :side 'right :select t :quit nil)
+  ;; (setq clojure-indent-style 'align-arguments)
+  ;; (setq clojure-align-forms-automatically nil)
+  )
+
+(setq
+ projectile-project-search-path '("~/hs"))
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
