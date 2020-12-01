@@ -52,7 +52,12 @@
          "B" #'sp-backward-barf-sexp
          "w" #'sp-wrap-round))))
 
-
+(map! :leader
+      ;;; <leader> TAB --- workspace
+      (:when (featurep! :ui workspaces)
+       (:prefix-map ("TAB" . "workspace")
+        :desc "Move right"  "}"   #'+workspace/swap-right
+        :desc "Move left"   "{"   #'+workspace/swap-left)))
 
 
 ;; (map! (:localleader
