@@ -136,7 +136,7 @@
   (set-popup-rule! "^\\*cider*" :size 0.45 :side 'right :select t :quit nil))
 
 (setq
- projectile-project-search-path '("~/hs"))
+ projectile-project-search-path '("~/hs" "~/projects"))
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
