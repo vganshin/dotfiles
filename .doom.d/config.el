@@ -6,7 +6,7 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
-(setq user-full-name "Vladislav Ganshin"
+(setq user-full-name "Vlad Ganshin"
       user-mail-address "vganshin@gmail.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
@@ -42,6 +42,8 @@
         ";" #'cider-pprint-eval-last-sexp-to-comment)))
       (:leader
        (:map (clojure-mode-map clojurescript-mode-map emacs-lisp-mode-map)
+        (:prefix ("s" . "cider")
+         "a" #'cider-switch-to-repl-buffer)
         (:prefix ("k" . "lisp")
          (:prefix ("d" . "kill")
           "x" #'sp-kill-sexp
@@ -95,7 +97,8 @@
           ("jdbc" . "clojure.java.jdbc")
           ("set" . "clojure.set")
           ("time" . "java-time")
-          ("str" . "cuerdas.core")
+          ("str" . "clojure.string")
+          ("zen" . "zen.core")
           ("path" . "pathetic.core")
           ("walk" . "clojure.walk")
           ("zip" . "clojure.zip")
