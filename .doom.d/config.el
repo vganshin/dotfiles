@@ -32,6 +32,8 @@
 
 (smartparens-global-strict-mode)
 
+(global-auto-revert-mode t)
+
 ;; (use-package! paredit
 ;;   :hook ((scheme-mode emacs-lisp-mode clojure-mode) . enable-paredit-mode))
 
