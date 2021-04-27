@@ -9,6 +9,11 @@
 (setq user-full-name "Vlad Ganshin"
       user-mail-address "vganshin@gmail.com")
 
+(add-load-path! "vendor/")
+
+(require 'psql)
+(define-key evil-normal-state-map (kbd "RET") 'run-sql)
+
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
 ;;
@@ -164,3 +169,5 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+(use-package doom-todo-ivy)
