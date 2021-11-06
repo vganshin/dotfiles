@@ -19,6 +19,8 @@
   :recipe (:host github :repo "jsmestad/doom-todo-ivy"
            :files ("doom-todo-ivy.el")))
 
+(package! map :pin "bb50dbaafc0f71743bd9ffd5784258a9fd682c20")
+
 ;; If the package you are trying to install does not contain a PACKAGENAME.el
 ;; file, or is located in a subdirectory of the repo, you'll need to specify
 ;; `:files' in the `:recipe':
