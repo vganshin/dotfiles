@@ -31,7 +31,9 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 ;; (setq doom-font (font-spec :font "Monoki Nerd Font Mono" :size 15))
+
 (setq doom-theme 'doom-dracula)
+;;(setq doom-theme 'doom-nord-light)
 
 (setq evil-escape-key-sequence "fd")
 
@@ -117,6 +119,7 @@
           ("cp" . "com.climate.claypoole")
           ("rf" . "re-frame.core")
           ("rf.db" . "re-frame.db")
+          ("zf" . "zf")
           ("r" . "reagent.core"))))
 
 ;; (map! :leader
