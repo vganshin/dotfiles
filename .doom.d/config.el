@@ -11,7 +11,7 @@
 
 (add-load-path! "vendor/")
 
-(require 'psql)
+;; (require 'psql)
 (define-key evil-normal-state-map (kbd "RET") 'run-sql)
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
