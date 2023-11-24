@@ -95,10 +95,12 @@
          "S" #'sp-backward-slurp-sexp
          "b" #'sp-forward-barf-sexp
          "B" #'sp-backward-barf-sexp
-         "w" #'sp-wrap-round))))
+         "w" #'sp-wrap-round
+         "r" #'paredit-raise-sexp))))
 
 (map! :leader
       ;;; <leader> TAB --- workspace
+      ("ESC" #'evil-switch-to-windows-last-buffer)
       (:when (featurep! :ui workspaces)
        (:prefix-map ("TAB" . "workspace")
         :desc "Move right"  "}"   #'+workspace/swap-right
@@ -179,3 +181,4 @@
       (insert (shell-command-to-string cmd)))))
 
 (define-key evil-normal-state-map (kbd "RET") 'run-sql)
+
