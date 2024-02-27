@@ -158,7 +158,8 @@
 (setq projectile-project-search-path '("~/hs" "~/projects"))
 
 
-
+(with-eval-after-load 'projectile
+  (add-to-list 'projectile-globally-ignored-directories "node_modules"))
 
 
 (defun run-sql ()
@@ -182,3 +183,10 @@
 
 (define-key evil-normal-state-map (kbd "RET") 'run-sql)
 
+
+
+;; (add-to-list 'initial-frame-alist '(fullscreen . maximized))
+
+;; (add-hook 'window-setup-hook #'toggle-frame-maximized)
+
+(add-hook 'window-setup-hook #'toggle-frame-fullscreen)
