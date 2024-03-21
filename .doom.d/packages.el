@@ -50,3 +50,5 @@
 ;(unpin! t)
 
 ;;(package! cider :pin "80408364f8e6870d8f5a33e0e096b86f1a7ef144")
+
+(package! all-the-icons)

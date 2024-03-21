@@ -149,7 +149,7 @@
 
   ;;(setq cider-repl-pop-to-buffer-on-connect 'display-only)
 
-  (set-popup-rule! "^\\*cider*" :size 0.45 :side 'right :select t :quit nil)
+  (set-popup-rule! "^\\*cider*" :size 0.45 :side 'right :select t :quit nil :ttl nil)
 
   ;; (setq cider-show-error-buffer 'only-in-repl)
 
