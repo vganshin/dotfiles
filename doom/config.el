@@ -7,7 +7,7 @@
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
 (setq user-full-name "Vlad Ganshin"
-      user-mail-address "ganshinv@gmail.com")
+      user-mail-address "vganshin@gmail.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
@@ -204,3 +204,24 @@
       (save-selected-window
         (other-window 1)
         (switch-to-buffer (other-buffer))))))
+
+;; to enable option+space to open chatgpt
+;; (define-key key-translation-map (kbd "M-SPC") nil)
+
+;; (use-package! chatgpt
+;;   :config
+;;   ;; Set your OpenAI API key here
+;;   (setq chatgpt-api-key "your-api-key")
+;;   ;; Specify GPT-4 model
+;;   ;; (setq chatgpt-model "gpt-4-turbo")
+;;   )
+
+(defun open-code-in-github ()
+  (interactive)
+  (message "%s" (thing-at-point 'line t))
+  )
+
+(defun my-print-current-line ()
+  "Print the text of the current line."
+  (interactive)
+  (message "%s" (string-trim (thing-at-point 'line t))))
