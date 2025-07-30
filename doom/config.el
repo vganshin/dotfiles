@@ -189,7 +189,7 @@
 
 ;; (add-hook 'window-setup-hook #'toggle-frame-maximized)
 
-(add-hook 'window-setup-hook #'toggle-frame-fullscreen)
+;; (add-hook 'window-setup-hook #'toggle-frame-fullscreen)
 
 (defun window-split-toggle ()
   "Toggle between horizontal and vertical split with two windows."
