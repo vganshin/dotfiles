@@ -42,6 +42,7 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
 
+
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
 ;;
@@ -75,8 +76,10 @@
 ;; they are implemented.
 
 (setq evil-escape-key-sequence "fd")
-(smartparens-global-strict-mode t)
+;; (smartparens-global-strict-mode t)
 (global-auto-revert-mode t)
+
+
 
 (map! (:localleader
       (:map (clojure-mode-map clojurescript-mode-map)
@@ -101,7 +104,7 @@
 (map! :leader
       ;;; <leader> TAB --- workspace
       ("ESC" #'evil-switch-to-windows-last-buffer)
-      (:when (featurep! :ui workspaces)
+      (:when (modulep! :ui workspaces)
        (:prefix-map ("TAB" . "workspace")
         :desc "Move right"  "}"   #'+workspace/swap-right
         :desc "Move left"   "{"   #'+workspace/swap-left)))
@@ -225,3 +228,13 @@
   "Print the text of the current line."
   (interactive)
   (message "%s" (string-trim (thing-at-point 'line t))))
+
+(after! smartparens
+  (setq sp-cancel-autoskip-on-backward-movement nil
+        sp-autoskip-closing-pair 'always
+        sp-autoinsert-pair t))
+
+(after! smartparens
+  (sp-pair "(" ")" :unless nil)
+  (sp-pair "[" "]" :unless nil)
+  (sp-pair "{" "}" :unless nil))
